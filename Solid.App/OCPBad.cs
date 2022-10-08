@@ -7,6 +7,10 @@ using System.Threading.Tasks;
 namespace Solid.App.OCPBad
 {
  
+
+
+
+
     public class SalaryCalculator
     {
 
@@ -18,6 +22,7 @@ namespace Solid.App.OCPBad
             {
                 case SalaryType.Low:
                     newSalary = salary * 2; ;
+                    
                     break;
                 case SalaryType.Middle:
                     newSalary = salary * 4 ;
@@ -43,6 +48,7 @@ namespace Solid.App.OCPBad
     {
         Low,
         Middle,
-        High
+        High,
+        
     }
 }
