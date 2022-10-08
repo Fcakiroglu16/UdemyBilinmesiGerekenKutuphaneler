@@ -3,17 +3,13 @@
 
 
 
-using Solid.App.LSPGood;
+
+
+using Solid.App.DIPGoodAndBad;
 
 Console.WriteLine("Hello, World!");
 
-BasePhone phone = new IPhone();
+var ProductService = new ProductService(new ProductRepositoryFromOracle());
 
-phone.Call();
- ((ITakePhoto)phone).TakePhoto();
-
-phone = new Nokia3310();
-
-phone.Call();
-
+ProductService.GetAll().ForEach(x => Console.WriteLine(x));
 
